@@ -1,0 +1,1 @@
+"""Client simulators for MiniCoin."""

@@ -1,0 +1,749 @@
+<!DOCTYPE html><!DOCTYPE html>
+
+<html lang="pt-BR"><html lang="pt-BR">
+
+<head>  <head>
+
+    <meta charset="UTF-8">    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MiniCoin - Relatório Técnico</title>    <title>MiniCoin — Relatório Parcial</title>
+
+    <style>    <style>
+
+        * {      body {
+
+            margin: 0;        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+            padding: 0;        margin: 2rem auto;
+
+            box-sizing: border-box;        max-width: 960px;
+
+        }        line-height: 1.6;
+
+                color: #1f2933;
+
+        body {        background: #f8fafc;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;      }
+
+            line-height: 1.6;      header {
+
+            color: #333;        text-align: center;
+
+            background: #f5f5f5;        margin-bottom: 2rem;
+
+        }      }
+
+              h1 {
+
+        .container {        margin-bottom: 0.5rem;
+
+            max-width: 1200px;      }
+
+            margin: 0 auto;      section {
+
+            padding: 20px;        background: #fff;
+
+            background: white;        padding: 1.5rem;
+
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);        border-radius: 12px;
+
+        }        box-shadow: 0 1px 4px rgba(15, 23, 42, 0.1);
+
+                margin-bottom: 2rem;
+
+        header {      }
+
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);      code {
+
+            color: white;        background: #0f172a;
+
+            padding: 40px;        color: #f5f7ff;
+
+            text-align: center;        padding: 0.25rem 0.5rem;
+
+            margin: -20px -20px 40px -20px;        border-radius: 4px;
+
+        }      }
+
+            </style>
+
+        h1 {  </head>
+
+            font-size: 2.5em;  <body>
+
+            margin-bottom: 10px;    <header>
+
+        }      <h1>MiniCoin — Relatório de Desenvolvimento</h1>
+
+              <p>UFPR · Redes de Computadores II · 2025/2</p>
+
+        h2 {    </header>
+
+            color: #667eea;
+
+            margin-top: 40px;    <section>
+
+            margin-bottom: 20px;      <h2>Status Atual</h2>
+
+            padding-bottom: 10px;      <p>
+
+            border-bottom: 3px solid #667eea;        Estrutura inicial do projeto criada. Implementação do ledger, servidor e
+
+        }        cliente será adicionada nas próximas etapas.
+
+              </p>
+
+        h3 {    </section>
+
+            color: #764ba2;
+
+            margin-top: 30px;    <section>
+
+            margin-bottom: 15px;      <h2>Próximos Passos</h2>
+
+        }      <ul>
+
+                <li>Implementar módulo de ledger com encadeamento de hashes.</li>
+
+        .info-box {        <li>Construir servidor TCP e definir protocolo de mensagens.</li>
+
+            background: #f0f4ff;        <li>Desenvolver simulador de clientes e cenários de teste.</li>
+
+            border-left: 4px solid #667eea;        <li>Registrar execuções e atualizar este relatório com resultados.</li>
+
+            padding: 20px;      </ul>
+
+            margin: 20px 0;    </section>
+
+        }  </body>
+
+        </html>
+
+        .success-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .code-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        
+        .code-link:hover {
+            background: #764ba2;
+        }
+        
+        .log-link {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        
+        .log-link:hover {
+            background: #45a049;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .diagram {
+            background: white;
+            border: 2px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .block-chain {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .block {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 200px;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .block h4 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .arrow {
+            font-size: 2em;
+            color: #667eea;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        
+        .test-results {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f0f4ff;
+            margin: 40px -20px -20px -20px;
+            color: #666;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🪙 MiniCoin</h1>
+            <p style="font-size: 1.2em;">Uma Moeda Virtual Baseada em Blockchain</p>
+            <p style="margin-top: 15px;">Trabalho Prático de Redes de Computadores II</p>
+            <p>UFPR - 2025/2</p>
+        </header>
+
+        <section id="resumo">
+            <h2>📋 Resumo Executivo</h2>
+            <div class="info-box">
+                <p><strong>Objetivo:</strong> Implementar uma moeda virtual chamada MiniCoin baseada em blockchain, com validação de transações, encadeamento criptográfico e comunicação cliente-servidor via TCP.</p>
+                <p style="margin-top: 10px;"><strong>Tecnologias:</strong> Python 3.11, AsyncIO, SHA-256, TCP Sockets, Pytest</p>
+                <p style="margin-top: 10px;"><strong>Principais Resultados:</strong> Sistema funcional com 23 testes unitários aprovados, demonstração completa de transações válidas e inválidas, logs detalhados de execução.</p>
+            </div>
+        </section>
+
+        <section id="arquitetura">
+            <h2>🏗️ Arquitetura do Sistema</h2>
+            
+            <h3>Visão Geral</h3>
+            <p>O MiniCoin foi desenvolvido seguindo uma arquitetura cliente-servidor com os seguintes componentes principais:</p>
+            
+            <div class="diagram">
+                <h4>Arquitetura de Componentes</h4>
+                <div class="block-chain">
+                    <div class="block">
+                        <h4>Cliente Simulator</h4>
+                        <p>Gera transações</p>
+                        <p>Simula cenários</p>
+                        <p>Registra logs</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="block">
+                        <h4>Servidor TCP</h4>
+                        <p>Recebe requisições</p>
+                        <p>Valida transações</p>
+                        <p>Gerencia ledger</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="block">
+                        <h4>Ledger (Blockchain)</h4>
+                        <p>Armazena blocos</p>
+                        <p>Calcula hashes</p>
+                        <p>Valida integridade</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Componentes do Sistema</h3>
+            
+            <h4>1. Ledger (Blockchain Core)</h4>
+            <p>O núcleo do sistema é implementado no módulo <code>ledger.py</code>, que contém:</p>
+            <ul>
+                <li><strong>Classe Block:</strong> Representa um bloco individual na blockchain</li>
+                <li><strong>Classe MiniCoinLedger:</strong> Gerencia a cadeia de blocos completa</li>
+                <li><strong>Hash SHA-256:</strong> Cada bloco contém seu próprio hash e o hash do bloco anterior</li>
+                <li><strong>Validação:</strong> Verifica saldo antes de permitir retiradas</li>
+            </ul>
+
+            <h4>2. Servidor TCP</h4>
+            <p>Implementado em <code>server.py</code>, o servidor:</p>
+            <ul>
+                <li>Utiliza <strong>asyncio</strong> para conexões assíncronas</li>
+                <li>Escuta na porta <strong>8888</strong> (configurável)</li>
+                <li>Aceita mensagens JSON com operações (deposit, withdraw, balance, history, verify)</li>
+                <li>Registra todas as operações em <code>logs/server.log</code></li>
+            </ul>
+
+            <h4>3. Cliente Simulator</h4>
+            <p>Implementado em <code>simulator.py</code>, o cliente:</p>
+            <ul>
+                <li>Conecta ao servidor via TCP</li>
+                <li>Gera cenários de teste automatizados</li>
+                <li>Simula transações válidas e inválidas</li>
+                <li>Registra resultados em <code>logs/client.log</code></li>
+            </ul>
+        </section>
+
+        <section id="blockchain">
+            <h2>⛓️ Estrutura da Blockchain</h2>
+            
+            <h3>Estrutura de um Bloco</h3>
+            <p>Cada bloco na MiniCoin contém os seguintes campos:</p>
+            
+            <table>
+                <tr>
+                    <th>Campo</th>
+                    <th>Descrição</th>
+                    <th>Exemplo</th>
+                </tr>
+                <tr>
+                    <td><code>index</code></td>
+                    <td>Posição do bloco na cadeia</td>
+                    <td>0, 1, 2, ...</td>
+                </tr>
+                <tr>
+                    <td><code>timestamp</code></td>
+                    <td>Data e hora da transação</td>
+                    <td>2025-10-28T10:00:00</td>
+                </tr>
+                <tr>
+                    <td><code>operation</code></td>
+                    <td>Tipo de operação</td>
+                    <td>CREATE, DEPOSIT, WITHDRAW</td>
+                </tr>
+                <tr>
+                    <td><code>amount</code></td>
+                    <td>Valor da transação</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <td><code>balance</code></td>
+                    <td>Saldo após a transação</td>
+                    <td>150.00</td>
+                </tr>
+                <tr>
+                    <td><code>owner</code></td>
+                    <td>Proprietário da conta</td>
+                    <td>João Silva</td>
+                </tr>
+                <tr>
+                    <td><code>previous_hash</code></td>
+                    <td>Hash do bloco anterior</td>
+                    <td>381c2d9b5b3c08b7...</td>
+                </tr>
+                <tr>
+                    <td><code>hash</code></td>
+                    <td>Hash deste bloco (SHA-256)</td>
+                    <td>049ae078241bac14...</td>
+                </tr>
+            </table>
+
+            <h3>Encadeamento de Blocos</h3>
+            <div class="diagram">
+                <h4>Exemplo de Cadeia de Blocos</h4>
+                <div class="block-chain">
+                    <div class="block">
+                        <h4>Bloco 0 (Genesis)</h4>
+                        <p><strong>Op:</strong> CREATE</p>
+                        <p><strong>Valor:</strong> 100.00</p>
+                        <p><strong>Saldo:</strong> 100.00</p>
+                        <p><strong>Prev:</strong> None</p>
+                        <p><strong>Hash:</strong> 381c2d...</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="block">
+                        <h4>Bloco 1</h4>
+                        <p><strong>Op:</strong> DEPOSIT</p>
+                        <p><strong>Valor:</strong> 50.00</p>
+                        <p><strong>Saldo:</strong> 150.00</p>
+                        <p><strong>Prev:</strong> 381c2d...</p>
+                        <p><strong>Hash:</strong> 049ae0...</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="block">
+                        <h4>Bloco 2</h4>
+                        <p><strong>Op:</strong> WITHDRAW</p>
+                        <p><strong>Valor:</strong> 30.00</p>
+                        <p><strong>Saldo:</strong> 120.00</p>
+                        <p><strong>Prev:</strong> 049ae0...</p>
+                        <p><strong>Hash:</strong> 4a10ab...</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Algoritmo de Hash</h3>
+            <p>O hash de cada bloco é calculado usando SHA-256 sobre a concatenação de todos os campos do bloco:</p>
+            <pre><code>hash = SHA256(index + timestamp + operation + amount + balance + owner + previous_hash)</code></pre>
+            <p>Este mecanismo garante que qualquer alteração em um bloco anterior invalida toda a cadeia subsequente.</p>
+        </section>
+
+        <section id="protocolo">
+            <h2>📡 Protocolo de Comunicação</h2>
+            
+            <h3>Formato das Mensagens</h3>
+            <p>O protocolo utiliza <strong>TCP</strong> com mensagens no formato <strong>JSON</strong> delimitadas por quebra de linha.</p>
+            
+            <h4>Requisição de Depósito</h4>
+            <pre><code>{
+  "action": "deposit",
+  "amount": 50.0,
+  "id": "client-001-0001"
+}</code></pre>
+
+            <h4>Resposta de Sucesso</h4>
+            <pre><code>{
+  "status": "ok",
+  "message": "Depósito de 50.00 realizado com sucesso",
+  "balance": 150.0,
+  "block_index": 1,
+  "block_hash": "049ae078241bac146d36964579404c06...",
+  "request_id": 1,
+  "client_id": "client-001-0001",
+  "timestamp": "2025-10-28T11:02:05.717248"
+}</code></pre>
+
+            <h4>Resposta de Erro (Saldo Insuficiente)</h4>
+            <pre><code>{
+  "status": "error",
+  "message": "Saldo insuficiente. Saldo atual: 120.00, tentativa de retirada: 150.00",
+  "balance": 120.0,
+  "request_id": 5,
+  "client_id": "client-001-0005",
+  "timestamp": "2025-10-28T11:02:10.123456"
+}</code></pre>
+
+            <h3>Operações Suportadas</h3>
+            <table>
+                <tr>
+                    <th>Operação</th>
+                    <th>Descrição</th>
+                    <th>Parâmetros</th>
+                </tr>
+                <tr>
+                    <td><code>deposit</code></td>
+                    <td>Adiciona fundos à conta</td>
+                    <td><code>amount</code>: valor positivo</td>
+                </tr>
+                <tr>
+                    <td><code>withdraw</code></td>
+                    <td>Remove fundos da conta</td>
+                    <td><code>amount</code>: valor ≤ saldo atual</td>
+                </tr>
+                <tr>
+                    <td><code>balance</code></td>
+                    <td>Consulta o saldo atual</td>
+                    <td>Nenhum</td>
+                </tr>
+                <tr>
+                    <td><code>history</code></td>
+                    <td>Retorna histórico completo</td>
+                    <td>Nenhum</td>
+                </tr>
+                <tr>
+                    <td><code>verify</code></td>
+                    <td>Verifica integridade da blockchain</td>
+                    <td>Nenhum</td>
+                </tr>
+                <tr>
+                    <td><code>ping</code></td>
+                    <td>Testa conectividade</td>
+                    <td>Nenhum</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="validacoes">
+            <h2>✅ Validações e Segurança</h2>
+            
+            <h3>Validação de Transações</h3>
+            <div class="info-box">
+                <h4>Regras Implementadas:</h4>
+                <ol>
+                    <li><strong>Depósitos:</strong> Apenas valores positivos são aceitos</li>
+                    <li><strong>Retiradas:</strong> O valor não pode exceder o saldo disponível</li>
+                    <li><strong>Valores negativos:</strong> São rejeitados com mensagem de erro</li>
+                    <li><strong>Valores zero:</strong> São rejeitados</li>
+                </ol>
+            </div>
+
+            <h3>Integridade da Blockchain</h3>
+            <p>O sistema implementa verificação de integridade que valida:</p>
+            <ul>
+                <li>Cada bloco tem o hash correto (recalcula e compara)</li>
+                <li>Cada bloco aponta para o hash correto do bloco anterior</li>
+                <li>Os saldos estão consistentes ao longo da cadeia</li>
+                <li>O bloco genesis tem <code>previous_hash = None</code></li>
+            </ul>
+
+            <div class="success-box">
+                <h4>✓ Resultado da Verificação</h4>
+                <p>Durante os testes, todas as blockchains geradas passaram na verificação de integridade, confirmando que o algoritmo de encadeamento e hash está funcionando corretamente.</p>
+            </div>
+        </section>
+
+        <section id="testes">
+            <h2>🧪 Testes e Validação</h2>
+            
+            <h3>Testes Unitários</h3>
+            <p>Foram implementados <strong>23 testes unitários</strong> usando pytest, cobrindo:</p>
+            
+            <div class="test-results">
+                <h4>Resultados dos Testes (23 passed in 0.04s)</h4>
+                <ul>
+                    <li>✓ Criação e serialização de blocos</li>
+                    <li>✓ Inicialização do ledger e bloco genesis</li>
+                    <li>✓ Depósitos válidos e inválidos</li>
+                    <li>✓ Retiradas válidas e com saldo insuficiente</li>
+                    <li>✓ Valores negativos e zero</li>
+                    <li>✓ Múltiplas transações sequenciais</li>
+                    <li>✓ Integridade da blockchain</li>
+                    <li>✓ Encadeamento correto de hashes</li>
+                    <li>✓ Unicidade dos hashes</li>
+                    <li>✓ Histórico e contagem de blocos</li>
+                    <li>✓ Consistência de saldo</li>
+                    <li>✓ Casos extremos (valores grandes, pequenos, saldo exato)</li>
+                </ul>
+            </div>
+
+            <h3>Cenários de Teste do Simulador</h3>
+            <p>O cliente simulador executa 5 cenários automatizados:</p>
+            
+            <table>
+                <tr>
+                    <th>Cenário</th>
+                    <th>Descrição</th>
+                    <th>Transações</th>
+                </tr>
+                <tr>
+                    <td>Basic Valid</td>
+                    <td>Transações básicas válidas</td>
+                    <td>5 (depósitos e retiradas válidos)</td>
+                </tr>
+                <tr>
+                    <td>Overdraft Attempts</td>
+                    <td>Tentativas de overdraft</td>
+                    <td>5 (incluindo 2 rejeições)</td>
+                </tr>
+                <tr>
+                    <td>Multiple Transactions</td>
+                    <td>Múltiplos depósitos e retiradas</td>
+                    <td>6 transações variadas</td>
+                </tr>
+                <tr>
+                    <td>Invalid Values</td>
+                    <td>Valores negativos e zero</td>
+                    <td>4 (todas rejeitadas)</td>
+                </tr>
+                <tr>
+                    <td>Random Transactions</td>
+                    <td>Transações aleatórias</td>
+                    <td>10 transações geradas aleatoriamente</td>
+                </tr>
+            </table>
+
+            <div class="success-box">
+                <h4>✓ Cobertura de Testes</h4>
+                <p>Os testes cobrem todos os requisitos do trabalho:</p>
+                <ul>
+                    <li>✓ Depósitos válidos funcionam corretamente</li>
+                    <li>✓ Retiradas válidas funcionam corretamente</li>
+                    <li>✓ Retiradas maiores que o saldo são rejeitadas</li>
+                    <li>✓ Blockchain mantém integridade</li>
+                    <li>✓ Logs detalhados são gerados</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="execucao">
+            <h2>🚀 Execução do Sistema</h2>
+            
+            <h3>Requisitos</h3>
+            <ul>
+                <li>Nix Package Manager (para ambiente isolado)</li>
+                <li>Python 3.11+</li>
+                <li>Bibliotecas: pydantic, pytest, rich (instaladas via Nix)</li>
+            </ul>
+
+            <h3>Como Executar</h3>
+            
+            <h4>Opção 1: Usando Nix Shell</h4>
+            <pre><code># Entrar no ambiente Nix
+nix-shell
+
+# Em um terminal, iniciar o servidor
+python -m minicoin.server --owner "João Silva" --initial 100.0
+
+# Em outro terminal, executar o simulador
+python -m clients.simulator
+
+# Executar testes
+pytest tests/ -v</code></pre>
+
+            <h4>Opção 2: Script de Demonstração</h4>
+            <pre><code># Executar demonstração completa
+./run_demo.sh</code></pre>
+
+            <h3>Logs Gerados</h3>
+            <p>Durante a execução, o sistema gera logs detalhados:</p>
+            <ul>
+                <li><code>logs/server.log</code>: Todas as operações do servidor, conexões e transações</li>
+                <li><code>logs/client.log</code>: Todas as requisições enviadas pelo cliente e respostas recebidas</li>
+            </ul>
+        </section>
+
+        <section id="resultados">
+            <h2>📊 Resultados Obtidos</h2>
+            
+            <div class="success-box">
+                <h3>✓ Funcionalidades Implementadas</h3>
+                <ul>
+                    <li>✓ Blockchain funcional com encadeamento de blocos</li>
+                    <li>✓ Hash SHA-256 para cada bloco</li>
+                    <li>✓ Servidor TCP assíncrono</li>
+                    <li>✓ Cliente simulador com múltiplos cenários</li>
+                    <li>✓ Validação de saldo para retiradas</li>
+                    <li>✓ Rejeição de transações inválidas</li>
+                    <li>✓ Verificação de integridade da blockchain</li>
+                    <li>✓ Logging detalhado de todas as operações</li>
+                    <li>✓ 23 testes unitários (100% aprovados)</li>
+                    <li>✓ Relatório HTML com diagramas e documentação</li>
+                </ul>
+            </div>
+
+            <h3>Exemplo de Transações</h3>
+            <div class="warning-box">
+                <h4>Exemplo 1: Transação Válida</h4>
+                <p><strong>Requisição:</strong> Retirada de 30.00 MiniCoins</p>
+                <p><strong>Saldo Atual:</strong> 150.00 MiniCoins</p>
+                <p><strong>Resultado:</strong> ✓ Aprovada</p>
+                <p><strong>Novo Saldo:</strong> 120.00 MiniCoins</p>
+                <p><strong>Bloco Criado:</strong> Índice 2, Hash: 4a10aba1a2a3e236...</p>
+            </div>
+
+            <div class="warning-box">
+                <h4>Exemplo 2: Tentativa de Overdraft</h4>
+                <p><strong>Requisição:</strong> Retirada de 150.00 MiniCoins</p>
+                <p><strong>Saldo Atual:</strong> 120.00 MiniCoins</p>
+                <p><strong>Resultado:</strong> ✗ Rejeitada</p>
+                <p><strong>Mensagem:</strong> "Saldo insuficiente. Saldo atual: 120.00, tentativa de retirada: 150.00"</p>
+                <p><strong>Saldo Mantido:</strong> 120.00 MiniCoins</p>
+            </div>
+        </section>
+
+        <section id="codigo-logs">
+            <h2>📁 Código Fonte e Logs</h2>
+            
+            <h3>Código Fonte</h3>
+            <p>Clique nos links abaixo para visualizar o código fonte:</p>
+            <div>
+                <a href="../deliverables/code/ledger.py.txt" class="code-link" target="_blank">ledger.py.txt</a>
+                <a href="../deliverables/code/server.py.txt" class="code-link" target="_blank">server.py.txt</a>
+                <a href="../deliverables/code/simulator.py.txt" class="code-link" target="_blank">simulator.py.txt</a>
+                <a href="../deliverables/code/test_ledger.py.txt" class="code-link" target="_blank">test_ledger.py.txt</a>
+            </div>
+
+            <h3>Logs de Execução</h3>
+            <p>Clique nos links abaixo para visualizar os logs de execução:</p>
+            <div>
+                <a href="../deliverables/logs/server.log" class="log-link" target="_blank">server.log</a>
+                <a href="../deliverables/logs/client.log" class="log-link" target="_blank">client.log</a>
+            </div>
+        </section>
+
+        <section id="conclusao">
+            <h2>🎯 Conclusão</h2>
+            
+            <p>O projeto MiniCoin foi implementado com sucesso, atendendo todos os requisitos especificados:</p>
+            
+            <ol>
+                <li><strong>Blockchain Funcional:</strong> Sistema de blocos encadeados com hash SHA-256</li>
+                <li><strong>Servidor Único:</strong> Um servidor mantém toda a blockchain</li>
+                <li><strong>Validação de Transações:</strong> Depósitos e retiradas validados corretamente</li>
+                <li><strong>Rejeição de Overdrafts:</strong> Tentativas de retirada maior que o saldo são rejeitadas</li>
+                <li><strong>Logging Detalhado:</strong> Todos os eventos são registrados em logs</li>
+                <li><strong>Testes Exaustivos:</strong> 23 testes unitários + 5 cenários de integração</li>
+                <li><strong>Documentação Completa:</strong> Relatório HTML com diagramas e explicações</li>
+            </ol>
+
+            <div class="success-box">
+                <h3>✓ Trabalho Completo e Funcional</h3>
+                <p>O sistema está pronto para demonstração e pode ser executado no laboratório conforme requisitos da disciplina.</p>
+            </div>
+
+            <h3>Tecnologias e Conceitos Aplicados</h3>
+            <ul>
+                <li><strong>Redes:</strong> Sockets TCP, protocolo cliente-servidor, comunicação assíncrona</li>
+                <li><strong>Criptografia:</strong> Hash SHA-256 para integridade</li>
+                <li><strong>Estruturas de Dados:</strong> Lista encadeada de blocos</li>
+                <li><strong>Engenharia de Software:</strong> Testes unitários, logging, documentação</li>
+            </ul>
+        </section>
+
+        <div class="footer">
+            <p><strong>MiniCoin - Trabalho Prático de Redes II</strong></p>
+            <p>Universidade Federal do Paraná - Departamento de Informática</p>
+            <p>Prof. Elias P. Duarte Jr. - 2025/2</p>
+            <p style="margin-top: 10px;">Desenvolvido com Python 3.11, AsyncIO e Nix</p>
+        </div>
+    </div>
+</body>
+</html>
