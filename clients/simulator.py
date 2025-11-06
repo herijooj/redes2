@@ -41,23 +41,20 @@ class MiniCoinClient:
     Cliente para conectar ao servidor MiniCoin e realizar transações.
     """
 
-    def __init__(self, host: str = "127.0.0.1", port: int = 8888, 
-                 client_id: str = "client-001"):
+    def __init__(self, host: str = "127.0.0.1", port: int = 8888):
         """
         Inicializa o cliente MiniCoin.
         
         Args:
             host: Endereço do servidor
             port: Porta do servidor
-            client_id: Identificador único do cliente
         """
         self.host = host
         self.port = port
-        self.client_id = client_id
         self.logger = setup_logging()
         self.request_counter = 0
         
-        self.logger.info(f"MiniCoin Client initialized: {client_id}")
+        self.logger.info(f"MiniCoin Client initialized")
 
     async def connect(self) -> tuple:
         """
@@ -90,7 +87,7 @@ class MiniCoinClient:
             Dicionário com a resposta do servidor
         """
         self.request_counter += 1
-        request_id = f"{self.client_id}-{self.request_counter:04d}"
+        request_id = f"{self.request_counter:04d}"
         
         request = {
             "action": action,
@@ -175,7 +172,7 @@ class TransactionSimulator:
         
         self.logger.info(f"Starting scenario: {scenario_name}")
         
-        client = MiniCoinClient(self.host, self.port, f"simulator-{scenario_name}")
+        client = MiniCoinClient(self.host, self.port)
         
         try:
             reader, writer = await client.connect()
