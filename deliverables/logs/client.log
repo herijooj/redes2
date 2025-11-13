@@ -109,3 +109,114 @@
 2025-10-28 11:02:26,256 - MiniCoinClient - INFO - [simulator-random-transactions-0013] Response: ok - Blockchain íntegra
 2025-10-28 11:02:26,256 - MiniCoinClient - INFO - Scenario random-transactions completed
 2025-10-28 11:02:26,256 - MiniCoinClient - INFO - Simulation completed: 23/30 successful
+2025-11-03 08:48:48,985 - MiniCoinClient - INFO - Starting scenario: basic-valid-transactions
+2025-11-03 08:48:48,986 - MiniCoinClient - INFO - MiniCoin Client initialized: simulator-basic-valid-transactions
+2025-11-03 08:48:48,986 - MiniCoinClient - INFO - Connected to server at 127.0.0.1:8888
+2025-11-03 08:48:48,986 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0001] Sent: PING {}
+2025-11-03 08:48:48,986 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0001] Response: ok - pong
+2025-11-03 08:48:49,486 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0002] Sent: BALANCE {}
+2025-11-03 08:48:49,487 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0002] Response: ok - 
+2025-11-03 08:48:49,987 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0003] Sent: DEPOSIT {'amount': 50.0}
+2025-11-03 08:48:49,988 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0003] Response: ok - Depósito de 50.00 realizado com sucesso
+2025-11-03 08:48:50,488 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0004] Sent: BALANCE {}
+2025-11-03 08:48:50,489 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0004] Response: ok - 
+2025-11-03 08:48:50,989 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0005] Sent: WITHDRAW {'amount': 30.0}
+2025-11-03 08:48:50,990 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0005] Response: ok - Retirada de 30.00 realizada com sucesso
+2025-11-03 08:48:51,490 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0006] Sent: BALANCE {}
+2025-11-03 08:48:51,491 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0006] Response: ok - 
+2025-11-03 08:48:51,992 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0007] Sent: BALANCE {}
+2025-11-03 08:48:51,992 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0007] Response: ok - 
+2025-11-03 08:48:51,992 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0008] Sent: VERIFY {}
+2025-11-03 08:48:51,992 - MiniCoinClient - INFO - [simulator-basic-valid-transactions-0008] Response: ok - Blockchain íntegra
+2025-11-03 08:48:51,992 - MiniCoinClient - INFO - Scenario basic-valid-transactions completed
+2025-11-03 08:48:52,993 - MiniCoinClient - INFO - Starting scenario: overdraft-attempts
+2025-11-03 08:48:52,993 - MiniCoinClient - INFO - MiniCoin Client initialized: simulator-overdraft-attempts
+2025-11-03 08:48:52,993 - MiniCoinClient - INFO - Connected to server at 127.0.0.1:8888
+2025-11-03 08:48:52,993 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0001] Sent: PING {}
+2025-11-03 08:48:52,994 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0001] Response: ok - pong
+2025-11-03 08:48:53,494 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0002] Sent: BALANCE {}
+2025-11-03 08:48:53,495 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0002] Response: ok - 
+2025-11-03 08:48:53,996 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0003] Sent: WITHDRAW {'amount': 50.0}
+2025-11-03 08:48:53,996 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0003] Response: ok - Retirada de 50.00 realizada com sucesso
+2025-11-03 08:48:54,497 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0004] Sent: WITHDRAW {'amount': 100.0}
+2025-11-03 08:48:54,497 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0004] Response: error - Saldo insuficiente. Saldo atual: 70.00, tentativa de retirada: 100.00
+2025-11-03 08:48:54,998 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0005] Sent: WITHDRAW {'amount': 200.0}
+2025-11-03 08:48:54,998 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0005] Response: error - Saldo insuficiente. Saldo atual: 70.00, tentativa de retirada: 200.00
+2025-11-03 08:48:55,499 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0006] Sent: BALANCE {}
+2025-11-03 08:48:55,499 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0006] Response: ok - 
+2025-11-03 08:48:56,000 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0007] Sent: BALANCE {}
+2025-11-03 08:48:56,000 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0007] Response: ok - 
+2025-11-03 08:48:56,000 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0008] Sent: VERIFY {}
+2025-11-03 08:48:56,000 - MiniCoinClient - INFO - [simulator-overdraft-attempts-0008] Response: ok - Blockchain íntegra
+2025-11-03 08:48:56,000 - MiniCoinClient - INFO - Scenario overdraft-attempts completed
+2025-11-03 08:48:57,000 - MiniCoinClient - INFO - Starting scenario: multiple-transactions
+2025-11-03 08:48:57,001 - MiniCoinClient - INFO - MiniCoin Client initialized: simulator-multiple-transactions
+2025-11-03 08:48:57,001 - MiniCoinClient - INFO - Connected to server at 127.0.0.1:8888
+2025-11-03 08:48:57,001 - MiniCoinClient - INFO - [simulator-multiple-transactions-0001] Sent: PING {}
+2025-11-03 08:48:57,001 - MiniCoinClient - INFO - [simulator-multiple-transactions-0001] Response: ok - pong
+2025-11-03 08:48:57,502 - MiniCoinClient - INFO - [simulator-multiple-transactions-0002] Sent: DEPOSIT {'amount': 100.0}
+2025-11-03 08:48:57,502 - MiniCoinClient - INFO - [simulator-multiple-transactions-0002] Response: ok - Depósito de 100.00 realizado com sucesso
+2025-11-03 08:48:58,003 - MiniCoinClient - INFO - [simulator-multiple-transactions-0003] Sent: DEPOSIT {'amount': 50.0}
+2025-11-03 08:48:58,003 - MiniCoinClient - INFO - [simulator-multiple-transactions-0003] Response: ok - Depósito de 50.00 realizado com sucesso
+2025-11-03 08:48:58,504 - MiniCoinClient - INFO - [simulator-multiple-transactions-0004] Sent: WITHDRAW {'amount': 80.0}
+2025-11-03 08:48:58,504 - MiniCoinClient - INFO - [simulator-multiple-transactions-0004] Response: ok - Retirada de 80.00 realizada com sucesso
+2025-11-03 08:48:59,005 - MiniCoinClient - INFO - [simulator-multiple-transactions-0005] Sent: DEPOSIT {'amount': 30.0}
+2025-11-03 08:48:59,006 - MiniCoinClient - INFO - [simulator-multiple-transactions-0005] Response: ok - Depósito de 30.00 realizado com sucesso
+2025-11-03 08:48:59,506 - MiniCoinClient - INFO - [simulator-multiple-transactions-0006] Sent: WITHDRAW {'amount': 120.0}
+2025-11-03 08:48:59,507 - MiniCoinClient - INFO - [simulator-multiple-transactions-0006] Response: ok - Retirada de 120.00 realizada com sucesso
+2025-11-03 08:49:00,007 - MiniCoinClient - INFO - [simulator-multiple-transactions-0007] Sent: BALANCE {}
+2025-11-03 08:49:00,008 - MiniCoinClient - INFO - [simulator-multiple-transactions-0007] Response: ok - 
+2025-11-03 08:49:00,508 - MiniCoinClient - INFO - [simulator-multiple-transactions-0008] Sent: BALANCE {}
+2025-11-03 08:49:00,509 - MiniCoinClient - INFO - [simulator-multiple-transactions-0008] Response: ok - 
+2025-11-03 08:49:00,509 - MiniCoinClient - INFO - [simulator-multiple-transactions-0009] Sent: VERIFY {}
+2025-11-03 08:49:00,509 - MiniCoinClient - INFO - [simulator-multiple-transactions-0009] Response: ok - Blockchain íntegra
+2025-11-03 08:49:00,509 - MiniCoinClient - INFO - Scenario multiple-transactions completed
+2025-11-03 08:49:01,509 - MiniCoinClient - INFO - Starting scenario: invalid-values
+2025-11-03 08:49:01,510 - MiniCoinClient - INFO - MiniCoin Client initialized: simulator-invalid-values
+2025-11-03 08:49:01,510 - MiniCoinClient - INFO - Connected to server at 127.0.0.1:8888
+2025-11-03 08:49:01,510 - MiniCoinClient - INFO - [simulator-invalid-values-0001] Sent: PING {}
+2025-11-03 08:49:01,510 - MiniCoinClient - INFO - [simulator-invalid-values-0001] Response: ok - pong
+2025-11-03 08:49:02,011 - MiniCoinClient - INFO - [simulator-invalid-values-0002] Sent: DEPOSIT {'amount': -10.0}
+2025-11-03 08:49:02,011 - MiniCoinClient - INFO - [simulator-invalid-values-0002] Response: error - Valor de depósito deve ser positivo
+2025-11-03 08:49:02,512 - MiniCoinClient - INFO - [simulator-invalid-values-0003] Sent: WITHDRAW {'amount': -5.0}
+2025-11-03 08:49:02,512 - MiniCoinClient - INFO - [simulator-invalid-values-0003] Response: error - Valor de retirada deve ser positivo
+2025-11-03 08:49:03,013 - MiniCoinClient - INFO - [simulator-invalid-values-0004] Sent: DEPOSIT {'amount': 0.0}
+2025-11-03 08:49:03,014 - MiniCoinClient - INFO - [simulator-invalid-values-0004] Response: error - Valor de depósito deve ser positivo
+2025-11-03 08:49:03,514 - MiniCoinClient - INFO - [simulator-invalid-values-0005] Sent: BALANCE {}
+2025-11-03 08:49:03,515 - MiniCoinClient - INFO - [simulator-invalid-values-0005] Response: ok - 
+2025-11-03 08:49:04,015 - MiniCoinClient - INFO - [simulator-invalid-values-0006] Sent: BALANCE {}
+2025-11-03 08:49:04,016 - MiniCoinClient - INFO - [simulator-invalid-values-0006] Response: ok - 
+2025-11-03 08:49:04,016 - MiniCoinClient - INFO - [simulator-invalid-values-0007] Sent: VERIFY {}
+2025-11-03 08:49:04,016 - MiniCoinClient - INFO - [simulator-invalid-values-0007] Response: ok - Blockchain íntegra
+2025-11-03 08:49:04,016 - MiniCoinClient - INFO - Scenario invalid-values completed
+2025-11-03 08:49:05,017 - MiniCoinClient - INFO - Starting scenario: random-transactions
+2025-11-03 08:49:05,017 - MiniCoinClient - INFO - MiniCoin Client initialized: simulator-random-transactions
+2025-11-03 08:49:05,018 - MiniCoinClient - INFO - Connected to server at 127.0.0.1:8888
+2025-11-03 08:49:05,018 - MiniCoinClient - INFO - [simulator-random-transactions-0001] Sent: PING {}
+2025-11-03 08:49:05,018 - MiniCoinClient - INFO - [simulator-random-transactions-0001] Response: ok - pong
+2025-11-03 08:49:05,519 - MiniCoinClient - INFO - [simulator-random-transactions-0002] Sent: DEPOSIT {'amount': 97.48}
+2025-11-03 08:49:05,519 - MiniCoinClient - INFO - [simulator-random-transactions-0002] Response: ok - Depósito de 97.48 realizado com sucesso
+2025-11-03 08:49:06,020 - MiniCoinClient - INFO - [simulator-random-transactions-0003] Sent: DEPOSIT {'amount': 19.95}
+2025-11-03 08:49:06,020 - MiniCoinClient - INFO - [simulator-random-transactions-0003] Response: ok - Depósito de 19.95 realizado com sucesso
+2025-11-03 08:49:06,521 - MiniCoinClient - INFO - [simulator-random-transactions-0004] Sent: WITHDRAW {'amount': 102.42}
+2025-11-03 08:49:06,521 - MiniCoinClient - INFO - [simulator-random-transactions-0004] Response: ok - Retirada de 102.42 realizada com sucesso
+2025-11-03 08:49:07,022 - MiniCoinClient - INFO - [simulator-random-transactions-0005] Sent: DEPOSIT {'amount': 55.47}
+2025-11-03 08:49:07,022 - MiniCoinClient - INFO - [simulator-random-transactions-0005] Response: ok - Depósito de 55.47 realizado com sucesso
+2025-11-03 08:49:07,523 - MiniCoinClient - INFO - [simulator-random-transactions-0006] Sent: WITHDRAW {'amount': 68.74}
+2025-11-03 08:49:07,523 - MiniCoinClient - INFO - [simulator-random-transactions-0006] Response: ok - Retirada de 68.74 realizada com sucesso
+2025-11-03 08:49:08,024 - MiniCoinClient - INFO - [simulator-random-transactions-0007] Sent: DEPOSIT {'amount': 16.02}
+2025-11-03 08:49:08,025 - MiniCoinClient - INFO - [simulator-random-transactions-0007] Response: ok - Depósito de 16.02 realizado com sucesso
+2025-11-03 08:49:08,525 - MiniCoinClient - INFO - [simulator-random-transactions-0008] Sent: DEPOSIT {'amount': 95.06}
+2025-11-03 08:49:08,526 - MiniCoinClient - INFO - [simulator-random-transactions-0008] Response: ok - Depósito de 95.06 realizado com sucesso
+2025-11-03 08:49:09,027 - MiniCoinClient - INFO - [simulator-random-transactions-0009] Sent: DEPOSIT {'amount': 45.61}
+2025-11-03 08:49:09,027 - MiniCoinClient - INFO - [simulator-random-transactions-0009] Response: ok - Depósito de 45.61 realizado com sucesso
+2025-11-03 08:49:09,528 - MiniCoinClient - INFO - [simulator-random-transactions-0010] Sent: WITHDRAW {'amount': 18.73}
+2025-11-03 08:49:09,528 - MiniCoinClient - INFO - [simulator-random-transactions-0010] Response: ok - Retirada de 18.73 realizada com sucesso
+2025-11-03 08:49:10,029 - MiniCoinClient - INFO - [simulator-random-transactions-0011] Sent: WITHDRAW {'amount': 31.21}
+2025-11-03 08:49:10,030 - MiniCoinClient - INFO - [simulator-random-transactions-0011] Response: ok - Retirada de 31.21 realizada com sucesso
+2025-11-03 08:49:10,531 - MiniCoinClient - INFO - [simulator-random-transactions-0012] Sent: BALANCE {}
+2025-11-03 08:49:10,531 - MiniCoinClient - INFO - [simulator-random-transactions-0012] Response: ok - 
+2025-11-03 08:49:10,531 - MiniCoinClient - INFO - [simulator-random-transactions-0013] Sent: VERIFY {}
+2025-11-03 08:49:10,531 - MiniCoinClient - INFO - [simulator-random-transactions-0013] Response: ok - Blockchain íntegra
+2025-11-03 08:49:10,532 - MiniCoinClient - INFO - Scenario random-transactions completed
+2025-11-03 08:49:10,532 - MiniCoinClient - INFO - Simulation completed: 25/30 successful
