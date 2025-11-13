@@ -10,7 +10,7 @@ echo "=========================================="
 echo ""
 
 echo "Iniciando servidor MiniCoin..."
-python -m minicoin.server --owner 'João Silva' --initial 100.0 &
+python3 -m minicoin.server --owner 'João Silva' --initial 100.0 &
 SERVER_PID=$!
 
 # Aguarda o servidor inicializar
@@ -21,7 +21,7 @@ echo "Executando simulador de transações..."
 echo ""
 
 # Executa o simulador
-python -m clients.simulator
+python3 -m clients.simulator
 
 echo ""
 echo "=========================================="
