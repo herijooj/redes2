@@ -1,0 +1,195 @@
+2025-10-28 11:01:49,600 - MiniCoinServer - INFO - MiniCoin Server initialized
+2025-10-28 11:01:49,600 - MiniCoinServer - INFO - Owner: João Silva
+2025-10-28 11:01:49,601 - MiniCoinServer - INFO - Initial deposit: 100.00
+2025-10-28 11:01:49,601 - MiniCoinServer - INFO - Genesis block hash: 381c2d9b5b3c08b7fa54e41cea2663a349b339fa41767dc8e0ad7d15b8b7ce06
+2025-10-28 11:01:49,601 - MiniCoinServer - INFO - Server listening on 127.0.0.1:8888
+2025-10-28 11:02:04,715 - MiniCoinServer - INFO - New connection from ('127.0.0.1', 45062)
+2025-10-28 11:02:04,715 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45062): {"action": "ping", "id": "simulator-basic-valid-transactions-0001"}
+2025-10-28 11:02:04,715 - MiniCoinServer - INFO - [Request #1] Action: ping
+2025-10-28 11:02:04,715 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45062): {"status": "ok", "message": "pong", "request_id": 1, "client_id": "simulator-basic-valid-transactions-0001", "timestamp": "2025-10-28T11:02:04.715217"}
+2025-10-28 11:02:05,216 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45062): {"action": "balance", "id": "simulator-basic-valid-transactions-0002"}
+2025-10-28 11:02:05,216 - MiniCoinServer - INFO - [Request #2] Action: balance
+2025-10-28 11:02:05,216 - MiniCoinServer - INFO - [Request #2] Balance query: 100.00
+2025-10-28 11:02:05,216 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45062): {"status": "ok", "balance": 100.0, "block_count": 1, "request_id": 2, "client_id": "simulator-basic-valid-transactions-0002", "timestamp": "2025-10-28T11:02:05.216186"}
+2025-10-28 11:02:05,717 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45062): {"action": "deposit", "id": "simulator-basic-valid-transactions-0003", "amount": 50.0}
+2025-10-28 11:02:05,717 - MiniCoinServer - INFO - [Request #3] Action: deposit
+2025-10-28 11:02:05,717 - MiniCoinServer - INFO - [Request #3] Deposit successful: 50.00
+2025-10-28 11:02:05,717 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45062): {"status": "ok", "message": "Dep\u00f3sito de 50.00 realizado com sucesso", "balance": 150.0, "block_index": 1, "block_hash": "049ae078241bac146d36964579404c06367048688f234657a02c453e37a3d7f3", "request_id": 3, "client_id": "simulator-basic-valid-transactions-0003", "timestamp": "2025-10-28T11:02:05.717248"}
+2025-10-28 11:02:06,217 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45062): {"action": "balance", "id": "simulator-basic-valid-transactions-0004"}
+2025-10-28 11:02:06,218 - MiniCoinServer - INFO - [Request #4] Action: balance
+2025-10-28 11:02:06,218 - MiniCoinServer - INFO - [Request #4] Balance query: 150.00
+2025-10-28 11:02:06,218 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45062): {"status": "ok", "balance": 150.0, "block_count": 2, "request_id": 4, "client_id": "simulator-basic-valid-transactions-0004", "timestamp": "2025-10-28T11:02:06.218119"}
+2025-10-28 11:02:06,718 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45062): {"action": "withdraw", "id": "simulator-basic-valid-transactions-0005", "amount": 30.0}
+2025-10-28 11:02:06,718 - MiniCoinServer - INFO - [Request #5] Action: withdraw
+2025-10-28 11:02:06,719 - MiniCoinServer - INFO - [Request #5] Withdrawal successful: 30.00
+2025-10-28 11:02:06,719 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45062): {"status": "ok", "message": "Retirada de 30.00 realizada com sucesso", "balance": 120.0, "block_index": 2, "block_hash": "4a10aba1a2a3e2360912ec222b3b359652b336391d224849f35066b01f619e9a", "request_id": 5, "client_id": "simulator-basic-valid-transactions-0005", "timestamp": "2025-10-28T11:02:06.719063"}
+2025-10-28 11:02:07,219 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45062): {"action": "balance", "id": "simulator-basic-valid-transactions-0006"}
+2025-10-28 11:02:07,220 - MiniCoinServer - INFO - [Request #6] Action: balance
+2025-10-28 11:02:07,220 - MiniCoinServer - INFO - [Request #6] Balance query: 120.00
+2025-10-28 11:02:07,220 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45062): {"status": "ok", "balance": 120.0, "block_count": 3, "request_id": 6, "client_id": "simulator-basic-valid-transactions-0006", "timestamp": "2025-10-28T11:02:07.220040"}
+2025-10-28 11:02:07,720 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45062): {"action": "balance", "id": "simulator-basic-valid-transactions-0007"}
+2025-10-28 11:02:07,721 - MiniCoinServer - INFO - [Request #7] Action: balance
+2025-10-28 11:02:07,721 - MiniCoinServer - INFO - [Request #7] Balance query: 120.00
+2025-10-28 11:02:07,721 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45062): {"status": "ok", "balance": 120.0, "block_count": 3, "request_id": 7, "client_id": "simulator-basic-valid-transactions-0007", "timestamp": "2025-10-28T11:02:07.721070"}
+2025-10-28 11:02:07,721 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45062): {"action": "verify", "id": "simulator-basic-valid-transactions-0008"}
+2025-10-28 11:02:07,721 - MiniCoinServer - INFO - [Request #8] Action: verify
+2025-10-28 11:02:07,721 - MiniCoinServer - INFO - [Request #8] Integrity check: Blockchain íntegra
+2025-10-28 11:02:07,721 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45062): {"status": "ok", "valid": true, "message": "Blockchain \u00edntegra", "request_id": 8, "client_id": "simulator-basic-valid-transactions-0008", "timestamp": "2025-10-28T11:02:07.721430"}
+2025-10-28 11:02:07,721 - MiniCoinServer - INFO - Client ('127.0.0.1', 45062) disconnected
+2025-10-28 11:02:07,721 - MiniCoinServer - INFO - Connection closed with ('127.0.0.1', 45062)
+2025-10-28 11:02:08,722 - MiniCoinServer - INFO - New connection from ('127.0.0.1', 45068)
+2025-10-28 11:02:08,722 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45068): {"action": "ping", "id": "simulator-overdraft-attempts-0001"}
+2025-10-28 11:02:08,722 - MiniCoinServer - INFO - [Request #9] Action: ping
+2025-10-28 11:02:08,722 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45068): {"status": "ok", "message": "pong", "request_id": 9, "client_id": "simulator-overdraft-attempts-0001", "timestamp": "2025-10-28T11:02:08.722527"}
+2025-10-28 11:02:09,223 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45068): {"action": "balance", "id": "simulator-overdraft-attempts-0002"}
+2025-10-28 11:02:09,223 - MiniCoinServer - INFO - [Request #10] Action: balance
+2025-10-28 11:02:09,223 - MiniCoinServer - INFO - [Request #10] Balance query: 120.00
+2025-10-28 11:02:09,223 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45068): {"status": "ok", "balance": 120.0, "block_count": 3, "request_id": 10, "client_id": "simulator-overdraft-attempts-0002", "timestamp": "2025-10-28T11:02:09.223652"}
+2025-10-28 11:02:09,724 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45068): {"action": "withdraw", "id": "simulator-overdraft-attempts-0003", "amount": 50.0}
+2025-10-28 11:02:09,724 - MiniCoinServer - INFO - [Request #11] Action: withdraw
+2025-10-28 11:02:09,724 - MiniCoinServer - INFO - [Request #11] Withdrawal successful: 50.00
+2025-10-28 11:02:09,724 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45068): {"status": "ok", "message": "Retirada de 50.00 realizada com sucesso", "balance": 70.0, "block_index": 3, "block_hash": "60542c6eadb3f0987a4cbc0b1be795e846ae4c32434d102dd22af826a2c8f18b", "request_id": 11, "client_id": "simulator-overdraft-attempts-0003", "timestamp": "2025-10-28T11:02:09.724685"}
+2025-10-28 11:02:10,225 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45068): {"action": "withdraw", "id": "simulator-overdraft-attempts-0004", "amount": 100.0}
+2025-10-28 11:02:10,225 - MiniCoinServer - INFO - [Request #12] Action: withdraw
+2025-10-28 11:02:10,225 - MiniCoinServer - WARNING - [Request #12] Withdrawal rejected: Saldo insuficiente. Saldo atual: 70.00, tentativa de retirada: 100.00
+2025-10-28 11:02:10,225 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45068): {"status": "error", "message": "Saldo insuficiente. Saldo atual: 70.00, tentativa de retirada: 100.00", "balance": 70.0, "request_id": 12, "client_id": "simulator-overdraft-attempts-0004", "timestamp": "2025-10-28T11:02:10.225830"}
+2025-10-28 11:02:10,726 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45068): {"action": "withdraw", "id": "simulator-overdraft-attempts-0005", "amount": 200.0}
+2025-10-28 11:02:10,726 - MiniCoinServer - INFO - [Request #13] Action: withdraw
+2025-10-28 11:02:10,726 - MiniCoinServer - WARNING - [Request #13] Withdrawal rejected: Saldo insuficiente. Saldo atual: 70.00, tentativa de retirada: 200.00
+2025-10-28 11:02:10,727 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45068): {"status": "error", "message": "Saldo insuficiente. Saldo atual: 70.00, tentativa de retirada: 200.00", "balance": 70.0, "request_id": 13, "client_id": "simulator-overdraft-attempts-0005", "timestamp": "2025-10-28T11:02:10.726964"}
+2025-10-28 11:02:11,227 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45068): {"action": "balance", "id": "simulator-overdraft-attempts-0006"}
+2025-10-28 11:02:11,227 - MiniCoinServer - INFO - [Request #14] Action: balance
+2025-10-28 11:02:11,227 - MiniCoinServer - INFO - [Request #14] Balance query: 70.00
+2025-10-28 11:02:11,227 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45068): {"status": "ok", "balance": 70.0, "block_count": 4, "request_id": 14, "client_id": "simulator-overdraft-attempts-0006", "timestamp": "2025-10-28T11:02:11.227945"}
+2025-10-28 11:02:11,728 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45068): {"action": "balance", "id": "simulator-overdraft-attempts-0007"}
+2025-10-28 11:02:11,728 - MiniCoinServer - INFO - [Request #15] Action: balance
+2025-10-28 11:02:11,728 - MiniCoinServer - INFO - [Request #15] Balance query: 70.00
+2025-10-28 11:02:11,729 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45068): {"status": "ok", "balance": 70.0, "block_count": 4, "request_id": 15, "client_id": "simulator-overdraft-attempts-0007", "timestamp": "2025-10-28T11:02:11.728998"}
+2025-10-28 11:02:11,729 - MiniCoinServer - INFO - Received from ('127.0.0.1', 45068): {"action": "verify", "id": "simulator-overdraft-attempts-0008"}
+2025-10-28 11:02:11,729 - MiniCoinServer - INFO - [Request #16] Action: verify
+2025-10-28 11:02:11,729 - MiniCoinServer - INFO - [Request #16] Integrity check: Blockchain íntegra
+2025-10-28 11:02:11,729 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 45068): {"status": "ok", "valid": true, "message": "Blockchain \u00edntegra", "request_id": 16, "client_id": "simulator-overdraft-attempts-0008", "timestamp": "2025-10-28T11:02:11.729249"}
+2025-10-28 11:02:11,729 - MiniCoinServer - INFO - Client ('127.0.0.1', 45068) disconnected
+2025-10-28 11:02:11,729 - MiniCoinServer - INFO - Connection closed with ('127.0.0.1', 45068)
+2025-10-28 11:02:12,730 - MiniCoinServer - INFO - New connection from ('127.0.0.1', 56290)
+2025-10-28 11:02:12,730 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56290): {"action": "ping", "id": "simulator-multiple-transactions-0001"}
+2025-10-28 11:02:12,730 - MiniCoinServer - INFO - [Request #17] Action: ping
+2025-10-28 11:02:12,730 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56290): {"status": "ok", "message": "pong", "request_id": 17, "client_id": "simulator-multiple-transactions-0001", "timestamp": "2025-10-28T11:02:12.730447"}
+2025-10-28 11:02:13,230 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56290): {"action": "deposit", "id": "simulator-multiple-transactions-0002", "amount": 100.0}
+2025-10-28 11:02:13,230 - MiniCoinServer - INFO - [Request #18] Action: deposit
+2025-10-28 11:02:13,230 - MiniCoinServer - INFO - [Request #18] Deposit successful: 100.00
+2025-10-28 11:02:13,231 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56290): {"status": "ok", "message": "Dep\u00f3sito de 100.00 realizado com sucesso", "balance": 170.0, "block_index": 4, "block_hash": "7070b66710ce413c8a972e1ca6564adb0e8946e0dcaf8a03e2bdb3cd11feda99", "request_id": 18, "client_id": "simulator-multiple-transactions-0002", "timestamp": "2025-10-28T11:02:13.230979"}
+2025-10-28 11:02:13,731 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56290): {"action": "deposit", "id": "simulator-multiple-transactions-0003", "amount": 50.0}
+2025-10-28 11:02:13,731 - MiniCoinServer - INFO - [Request #19] Action: deposit
+2025-10-28 11:02:13,731 - MiniCoinServer - INFO - [Request #19] Deposit successful: 50.00
+2025-10-28 11:02:13,732 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56290): {"status": "ok", "message": "Dep\u00f3sito de 50.00 realizado com sucesso", "balance": 220.0, "block_index": 5, "block_hash": "4c5b8be0d8c6f9be269f70ed2769379d790ee6d40014099e982460a9ad49ffe4", "request_id": 19, "client_id": "simulator-multiple-transactions-0003", "timestamp": "2025-10-28T11:02:13.731992"}
+2025-10-28 11:02:14,232 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56290): {"action": "withdraw", "id": "simulator-multiple-transactions-0004", "amount": 80.0}
+2025-10-28 11:02:14,233 - MiniCoinServer - INFO - [Request #20] Action: withdraw
+2025-10-28 11:02:14,233 - MiniCoinServer - INFO - [Request #20] Withdrawal successful: 80.00
+2025-10-28 11:02:14,233 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56290): {"status": "ok", "message": "Retirada de 80.00 realizada com sucesso", "balance": 140.0, "block_index": 6, "block_hash": "3f303c25d0bdd567f3161b0ec49990a315a04af15bece672c6bd25a036bc3938", "request_id": 20, "client_id": "simulator-multiple-transactions-0004", "timestamp": "2025-10-28T11:02:14.233088"}
+2025-10-28 11:02:14,734 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56290): {"action": "deposit", "id": "simulator-multiple-transactions-0005", "amount": 30.0}
+2025-10-28 11:02:14,734 - MiniCoinServer - INFO - [Request #21] Action: deposit
+2025-10-28 11:02:14,734 - MiniCoinServer - INFO - [Request #21] Deposit successful: 30.00
+2025-10-28 11:02:14,734 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56290): {"status": "ok", "message": "Dep\u00f3sito de 30.00 realizado com sucesso", "balance": 170.0, "block_index": 7, "block_hash": "4ec03436d4199bfd35da1be02d2dd088ba09e2b5087f73b801b3dafc96497bae", "request_id": 21, "client_id": "simulator-multiple-transactions-0005", "timestamp": "2025-10-28T11:02:14.734368"}
+2025-10-28 11:02:15,235 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56290): {"action": "withdraw", "id": "simulator-multiple-transactions-0006", "amount": 120.0}
+2025-10-28 11:02:15,235 - MiniCoinServer - INFO - [Request #22] Action: withdraw
+2025-10-28 11:02:15,235 - MiniCoinServer - INFO - [Request #22] Withdrawal successful: 120.00
+2025-10-28 11:02:15,235 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56290): {"status": "ok", "message": "Retirada de 120.00 realizada com sucesso", "balance": 50.0, "block_index": 8, "block_hash": "6f9640ccf67f77fe2453ac19bb5d9c3950075b0329241caed7dc44cf8a30dc65", "request_id": 22, "client_id": "simulator-multiple-transactions-0006", "timestamp": "2025-10-28T11:02:15.235640"}
+2025-10-28 11:02:15,736 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56290): {"action": "balance", "id": "simulator-multiple-transactions-0007"}
+2025-10-28 11:02:15,736 - MiniCoinServer - INFO - [Request #23] Action: balance
+2025-10-28 11:02:15,736 - MiniCoinServer - INFO - [Request #23] Balance query: 50.00
+2025-10-28 11:02:15,736 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56290): {"status": "ok", "balance": 50.0, "block_count": 9, "request_id": 23, "client_id": "simulator-multiple-transactions-0007", "timestamp": "2025-10-28T11:02:15.736610"}
+2025-10-28 11:02:16,237 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56290): {"action": "balance", "id": "simulator-multiple-transactions-0008"}
+2025-10-28 11:02:16,237 - MiniCoinServer - INFO - [Request #24] Action: balance
+2025-10-28 11:02:16,237 - MiniCoinServer - INFO - [Request #24] Balance query: 50.00
+2025-10-28 11:02:16,237 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56290): {"status": "ok", "balance": 50.0, "block_count": 9, "request_id": 24, "client_id": "simulator-multiple-transactions-0008", "timestamp": "2025-10-28T11:02:16.237748"}
+2025-10-28 11:02:16,237 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56290): {"action": "verify", "id": "simulator-multiple-transactions-0009"}
+2025-10-28 11:02:16,237 - MiniCoinServer - INFO - [Request #25] Action: verify
+2025-10-28 11:02:16,238 - MiniCoinServer - INFO - [Request #25] Integrity check: Blockchain íntegra
+2025-10-28 11:02:16,238 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56290): {"status": "ok", "valid": true, "message": "Blockchain \u00edntegra", "request_id": 25, "client_id": "simulator-multiple-transactions-0009", "timestamp": "2025-10-28T11:02:16.238017"}
+2025-10-28 11:02:16,238 - MiniCoinServer - INFO - Client ('127.0.0.1', 56290) disconnected
+2025-10-28 11:02:16,238 - MiniCoinServer - INFO - Connection closed with ('127.0.0.1', 56290)
+2025-10-28 11:02:17,239 - MiniCoinServer - INFO - New connection from ('127.0.0.1', 56292)
+2025-10-28 11:02:17,239 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56292): {"action": "ping", "id": "simulator-invalid-values-0001"}
+2025-10-28 11:02:17,239 - MiniCoinServer - INFO - [Request #26] Action: ping
+2025-10-28 11:02:17,239 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56292): {"status": "ok", "message": "pong", "request_id": 26, "client_id": "simulator-invalid-values-0001", "timestamp": "2025-10-28T11:02:17.239539"}
+2025-10-28 11:02:17,740 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56292): {"action": "deposit", "id": "simulator-invalid-values-0002", "amount": -10.0}
+2025-10-28 11:02:17,740 - MiniCoinServer - INFO - [Request #27] Action: deposit
+2025-10-28 11:02:17,740 - MiniCoinServer - WARNING - [Request #27] Deposit failed: Valor de depósito deve ser positivo
+2025-10-28 11:02:17,740 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56292): {"status": "error", "message": "Valor de dep\u00f3sito deve ser positivo", "balance": 50.0, "request_id": 27, "client_id": "simulator-invalid-values-0002", "timestamp": "2025-10-28T11:02:17.740120"}
+2025-10-28 11:02:18,240 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56292): {"action": "withdraw", "id": "simulator-invalid-values-0003", "amount": -5.0}
+2025-10-28 11:02:18,241 - MiniCoinServer - INFO - [Request #28] Action: withdraw
+2025-10-28 11:02:18,241 - MiniCoinServer - WARNING - [Request #28] Withdrawal rejected: Valor de retirada deve ser positivo
+2025-10-28 11:02:18,241 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56292): {"status": "error", "message": "Valor de retirada deve ser positivo", "balance": 50.0, "request_id": 28, "client_id": "simulator-invalid-values-0003", "timestamp": "2025-10-28T11:02:18.241063"}
+2025-10-28 11:02:18,741 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56292): {"action": "deposit", "id": "simulator-invalid-values-0004", "amount": 0.0}
+2025-10-28 11:02:18,741 - MiniCoinServer - INFO - [Request #29] Action: deposit
+2025-10-28 11:02:18,742 - MiniCoinServer - WARNING - [Request #29] Deposit failed: Valor de depósito deve ser positivo
+2025-10-28 11:02:18,742 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56292): {"status": "error", "message": "Valor de dep\u00f3sito deve ser positivo", "balance": 50.0, "request_id": 29, "client_id": "simulator-invalid-values-0004", "timestamp": "2025-10-28T11:02:18.742021"}
+2025-10-28 11:02:19,242 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56292): {"action": "balance", "id": "simulator-invalid-values-0005"}
+2025-10-28 11:02:19,242 - MiniCoinServer - INFO - [Request #30] Action: balance
+2025-10-28 11:02:19,243 - MiniCoinServer - INFO - [Request #30] Balance query: 50.00
+2025-10-28 11:02:19,243 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56292): {"status": "ok", "balance": 50.0, "block_count": 9, "request_id": 30, "client_id": "simulator-invalid-values-0005", "timestamp": "2025-10-28T11:02:19.243037"}
+2025-10-28 11:02:19,743 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56292): {"action": "balance", "id": "simulator-invalid-values-0006"}
+2025-10-28 11:02:19,744 - MiniCoinServer - INFO - [Request #31] Action: balance
+2025-10-28 11:02:19,744 - MiniCoinServer - INFO - [Request #31] Balance query: 50.00
+2025-10-28 11:02:19,744 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56292): {"status": "ok", "balance": 50.0, "block_count": 9, "request_id": 31, "client_id": "simulator-invalid-values-0006", "timestamp": "2025-10-28T11:02:19.744060"}
+2025-10-28 11:02:19,744 - MiniCoinServer - INFO - Received from ('127.0.0.1', 56292): {"action": "verify", "id": "simulator-invalid-values-0007"}
+2025-10-28 11:02:19,744 - MiniCoinServer - INFO - [Request #32] Action: verify
+2025-10-28 11:02:19,744 - MiniCoinServer - INFO - [Request #32] Integrity check: Blockchain íntegra
+2025-10-28 11:02:19,744 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 56292): {"status": "ok", "valid": true, "message": "Blockchain \u00edntegra", "request_id": 32, "client_id": "simulator-invalid-values-0007", "timestamp": "2025-10-28T11:02:19.744293"}
+2025-10-28 11:02:19,744 - MiniCoinServer - INFO - Client ('127.0.0.1', 56292) disconnected
+2025-10-28 11:02:19,744 - MiniCoinServer - INFO - Connection closed with ('127.0.0.1', 56292)
+2025-10-28 11:02:20,745 - MiniCoinServer - INFO - New connection from ('127.0.0.1', 53972)
+2025-10-28 11:02:20,745 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "ping", "id": "simulator-random-transactions-0001"}
+2025-10-28 11:02:20,745 - MiniCoinServer - INFO - [Request #33] Action: ping
+2025-10-28 11:02:20,745 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "ok", "message": "pong", "request_id": 33, "client_id": "simulator-random-transactions-0001", "timestamp": "2025-10-28T11:02:20.745647"}
+2025-10-28 11:02:21,246 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "deposit", "id": "simulator-random-transactions-0002", "amount": 38.41}
+2025-10-28 11:02:21,246 - MiniCoinServer - INFO - [Request #34] Action: deposit
+2025-10-28 11:02:21,246 - MiniCoinServer - INFO - [Request #34] Deposit successful: 38.41
+2025-10-28 11:02:21,246 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "ok", "message": "Dep\u00f3sito de 38.41 realizado com sucesso", "balance": 88.41, "block_index": 9, "block_hash": "57a630b914d4b7b4924c9ebd11ee125e19eba87cb52fb52792fa261921132b29", "request_id": 34, "client_id": "simulator-random-transactions-0002", "timestamp": "2025-10-28T11:02:21.246637"}
+2025-10-28 11:02:21,747 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "withdraw", "id": "simulator-random-transactions-0003", "amount": 30.48}
+2025-10-28 11:02:21,747 - MiniCoinServer - INFO - [Request #35] Action: withdraw
+2025-10-28 11:02:21,747 - MiniCoinServer - INFO - [Request #35] Withdrawal successful: 30.48
+2025-10-28 11:02:21,747 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "ok", "message": "Retirada de 30.48 realizada com sucesso", "balance": 57.92999999999999, "block_index": 10, "block_hash": "5642b9ff6111e2046865af127631d51f4461995f4204a4f13c5594118d7b3f61", "request_id": 35, "client_id": "simulator-random-transactions-0003", "timestamp": "2025-10-28T11:02:21.747282"}
+2025-10-28 11:02:22,247 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "deposit", "id": "simulator-random-transactions-0004", "amount": 75.99}
+2025-10-28 11:02:22,247 - MiniCoinServer - INFO - [Request #36] Action: deposit
+2025-10-28 11:02:22,248 - MiniCoinServer - INFO - [Request #36] Deposit successful: 75.99
+2025-10-28 11:02:22,248 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "ok", "message": "Dep\u00f3sito de 75.99 realizado com sucesso", "balance": 133.92, "block_index": 11, "block_hash": "5f8ef8ffdea8b9bd9d9c1fe5a197a0b62744d64ee59b452a1f268860ec7ddfaf", "request_id": 36, "client_id": "simulator-random-transactions-0004", "timestamp": "2025-10-28T11:02:22.248055"}
+2025-10-28 11:02:22,748 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "deposit", "id": "simulator-random-transactions-0005", "amount": 76.28}
+2025-10-28 11:02:22,749 - MiniCoinServer - INFO - [Request #37] Action: deposit
+2025-10-28 11:02:22,749 - MiniCoinServer - INFO - [Request #37] Deposit successful: 76.28
+2025-10-28 11:02:22,749 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "ok", "message": "Dep\u00f3sito de 76.28 realizado com sucesso", "balance": 210.2, "block_index": 12, "block_hash": "1e7c8eb6ce3749ecd76d2c1203d71baa4468c7cf5759f48d8a9409cbb7304b8f", "request_id": 37, "client_id": "simulator-random-transactions-0005", "timestamp": "2025-10-28T11:02:22.749114"}
+2025-10-28 11:02:23,249 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "deposit", "id": "simulator-random-transactions-0006", "amount": 19.13}
+2025-10-28 11:02:23,250 - MiniCoinServer - INFO - [Request #38] Action: deposit
+2025-10-28 11:02:23,250 - MiniCoinServer - INFO - [Request #38] Deposit successful: 19.13
+2025-10-28 11:02:23,250 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "ok", "message": "Dep\u00f3sito de 19.13 realizado com sucesso", "balance": 229.32999999999998, "block_index": 13, "block_hash": "1be5fc34379c814422bc3b5af792b075af2e03bc51778bef1ead1ee06823dfd8", "request_id": 38, "client_id": "simulator-random-transactions-0006", "timestamp": "2025-10-28T11:02:23.250060"}
+2025-10-28 11:02:23,750 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "withdraw", "id": "simulator-random-transactions-0007", "amount": 65.72}
+2025-10-28 11:02:23,750 - MiniCoinServer - INFO - [Request #39] Action: withdraw
+2025-10-28 11:02:23,750 - MiniCoinServer - INFO - [Request #39] Withdrawal successful: 65.72
+2025-10-28 11:02:23,751 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "ok", "message": "Retirada de 65.72 realizada com sucesso", "balance": 163.60999999999999, "block_index": 14, "block_hash": "36cf4391fb42f67d6490b4d2bcca3767108478fbdda665c27f12d1d8f57de4cc", "request_id": 39, "client_id": "simulator-random-transactions-0007", "timestamp": "2025-10-28T11:02:23.751008"}
+2025-10-28 11:02:24,251 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "withdraw", "id": "simulator-random-transactions-0008", "amount": 80.52}
+2025-10-28 11:02:24,252 - MiniCoinServer - INFO - [Request #40] Action: withdraw
+2025-10-28 11:02:24,252 - MiniCoinServer - INFO - [Request #40] Withdrawal successful: 80.52
+2025-10-28 11:02:24,252 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "ok", "message": "Retirada de 80.52 realizada com sucesso", "balance": 83.08999999999999, "block_index": 15, "block_hash": "6db4886495462b44d2ed55e448caba44dfee1fe5d88953b3860d643821403a56", "request_id": 40, "client_id": "simulator-random-transactions-0008", "timestamp": "2025-10-28T11:02:24.252098"}
+2025-10-28 11:02:24,752 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "withdraw", "id": "simulator-random-transactions-0009", "amount": 92.56}
+2025-10-28 11:02:24,752 - MiniCoinServer - INFO - [Request #41] Action: withdraw
+2025-10-28 11:02:24,753 - MiniCoinServer - WARNING - [Request #41] Withdrawal rejected: Saldo insuficiente. Saldo atual: 83.09, tentativa de retirada: 92.56
+2025-10-28 11:02:24,753 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "error", "message": "Saldo insuficiente. Saldo atual: 83.09, tentativa de retirada: 92.56", "balance": 83.08999999999999, "request_id": 41, "client_id": "simulator-random-transactions-0009", "timestamp": "2025-10-28T11:02:24.753041"}
+2025-10-28 11:02:25,253 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "withdraw", "id": "simulator-random-transactions-0010", "amount": 138.48}
+2025-10-28 11:02:25,253 - MiniCoinServer - INFO - [Request #42] Action: withdraw
+2025-10-28 11:02:25,253 - MiniCoinServer - WARNING - [Request #42] Withdrawal rejected: Saldo insuficiente. Saldo atual: 83.09, tentativa de retirada: 138.48
+2025-10-28 11:02:25,254 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "error", "message": "Saldo insuficiente. Saldo atual: 83.09, tentativa de retirada: 138.48", "balance": 83.08999999999999, "request_id": 42, "client_id": "simulator-random-transactions-0010", "timestamp": "2025-10-28T11:02:25.253990"}
+2025-10-28 11:02:25,754 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "deposit", "id": "simulator-random-transactions-0011", "amount": 93.17}
+2025-10-28 11:02:25,755 - MiniCoinServer - INFO - [Request #43] Action: deposit
+2025-10-28 11:02:25,755 - MiniCoinServer - INFO - [Request #43] Deposit successful: 93.17
+2025-10-28 11:02:25,755 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "ok", "message": "Dep\u00f3sito de 93.17 realizado com sucesso", "balance": 176.26, "block_index": 16, "block_hash": "140d770fdef236a4acb4e1dbb5d3945cf5bdabbf9fcc8a56813a34b330c82c85", "request_id": 43, "client_id": "simulator-random-transactions-0011", "timestamp": "2025-10-28T11:02:25.755092"}
+2025-10-28 11:02:26,255 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "balance", "id": "simulator-random-transactions-0012"}
+2025-10-28 11:02:26,255 - MiniCoinServer - INFO - [Request #44] Action: balance
+2025-10-28 11:02:26,255 - MiniCoinServer - INFO - [Request #44] Balance query: 176.26
+2025-10-28 11:02:26,256 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "ok", "balance": 176.26, "block_count": 17, "request_id": 44, "client_id": "simulator-random-transactions-0012", "timestamp": "2025-10-28T11:02:26.255990"}
+2025-10-28 11:02:26,256 - MiniCoinServer - INFO - Received from ('127.0.0.1', 53972): {"action": "verify", "id": "simulator-random-transactions-0013"}
+2025-10-28 11:02:26,256 - MiniCoinServer - INFO - [Request #45] Action: verify
+2025-10-28 11:02:26,256 - MiniCoinServer - INFO - [Request #45] Integrity check: Blockchain íntegra
+2025-10-28 11:02:26,256 - MiniCoinServer - INFO - Sent to ('127.0.0.1', 53972): {"status": "ok", "valid": true, "message": "Blockchain \u00edntegra", "request_id": 45, "client_id": "simulator-random-transactions-0013", "timestamp": "2025-10-28T11:02:26.256253"}
+2025-10-28 11:02:26,256 - MiniCoinServer - INFO - Client ('127.0.0.1', 53972) disconnected
+2025-10-28 11:02:26,256 - MiniCoinServer - INFO - Connection closed with ('127.0.0.1', 53972)
