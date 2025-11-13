@@ -177,7 +177,7 @@ class MiniCoinServer:
     async def handle_deposit(self, request: dict, request_id: int) -> dict:
         """Processa uma requisição de depósito."""
         amount = request.get("amount", 0)
-        client_id = request.get("id", "unknown")
+        client_id = request.get("client_id", request.get("id", "unknown"))
         
         success, message, block = self.ledger.deposit(amount)
         
@@ -207,7 +207,7 @@ class MiniCoinServer:
     async def handle_withdraw(self, request: dict, request_id: int) -> dict:
         """Processa uma requisição de retirada."""
         amount = request.get("amount", 0)
-        client_id = request.get("id", "unknown")
+        client_id = request.get("client_id", request.get("id", "unknown"))
         
         current_balance = self.ledger.get_balance()
         success, message, block = self.ledger.withdraw(amount)
@@ -237,7 +237,7 @@ class MiniCoinServer:
 
     async def handle_balance(self, request: dict, request_id: int) -> dict:
         """Processa uma requisição de consulta de saldo."""
-        client_id = request.get("id", "unknown")
+        client_id = request.get("client_id", request.get("id", "unknown"))
         balance = self.ledger.get_balance()
         
         self.logger.info(f"[Request #{request_id}] Balance query: {balance:.2f}")
@@ -252,7 +252,7 @@ class MiniCoinServer:
 
     async def handle_history(self, request: dict, request_id: int) -> dict:
         """Processa uma requisição de histórico."""
-        client_id = request.get("id", "unknown")
+        client_id = request.get("client_id", request.get("id", "unknown"))
         history = self.ledger.get_history()
         
         self.logger.info(f"[Request #{request_id}] History query: {len(history)} blocks")
@@ -267,7 +267,7 @@ class MiniCoinServer:
 
     async def handle_verify(self, request: dict, request_id: int) -> dict:
         """Processa uma requisição de verificação de integridade."""
-        client_id = request.get("id", "unknown")
+        client_id = request.get("client_id", request.get("id", "unknown"))
         valid, message = self.ledger.verify_integrity()
         
         self.logger.info(f"[Request #{request_id}] Integrity check: {message}")
@@ -282,7 +282,7 @@ class MiniCoinServer:
 
     async def handle_ping(self, request: dict, request_id: int) -> dict:
         """Processa uma requisição de ping."""
-        client_id = request.get("id", "unknown")
+        client_id = request.get("client_id", request.get("id", "unknown"))
         
         self.logger.debug(f"[Request #{request_id}] Ping from {client_id}")
         return {

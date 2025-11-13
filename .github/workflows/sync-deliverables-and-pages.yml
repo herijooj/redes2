@@ -1,0 +1,84 @@
+name: Sync Deliverables and Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check .gitignore coverage
+        run: |
+          set -euo pipefail
+          for path in deliverables deliverables/code/ledger.py.txt deliverables/logs logs/server.log; do
+            if git check-ignore -q "$path"; then
+              echo "::warning::Path '$path' is ignored by .gitignore"
+              git check-ignore -v "$path"
+            else
+              echo "Path '$path' is NOT ignored."
+            fi
+          done
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pytest-asyncio
+
+      - name: Run tests
+        run: |
+          set -euo pipefail
+          pytest
+
+      - name: Sync deliverables
+        run: |
+          set -euo pipefail
+          python .github/scripts/sync_deliverables.py
+
+      - name: Show git status
+        run: |
+          set -euo pipefail
+          git status --short
+
+      - name: Commit deliverables updates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: sync deliverables"
+          file_pattern: deliverables/**/*
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/report
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

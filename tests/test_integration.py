@@ -4,13 +4,14 @@ Testa a comunicação cliente-servidor e cenários end-to-end.
 """
 
 import pytest
+import pytest_asyncio
 import asyncio
 import json
 from minicoin.server import MiniCoinServer
 from clients.simulator import MiniCoinClient
 
 
-@pytest.fixture
+@pytest_asyncio.fixture
 async def server():
     """Fixture que cria e inicia um servidor de teste."""
     test_server = MiniCoinServer(
@@ -36,7 +37,7 @@ async def server():
         pass
 
 
-@pytest.fixture
+@pytest_asyncio.fixture
 async def client():
     """Fixture que cria um cliente de teste."""
     test_client = MiniCoinClient(

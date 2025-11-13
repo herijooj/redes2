@@ -37,24 +37,17 @@ def setup_logging(log_file: str = "logs/client.log"):
 
 
 class MiniCoinClient:
-    """
-    Cliente para conectar ao servidor MiniCoin e realizar transações.
-    """
+    """Cliente para conectar ao servidor MiniCoin e realizar transações."""
 
-    def __init__(self, host: str = "127.0.0.1", port: int = 8888):
-        """
-        Inicializa o cliente MiniCoin.
-        
-        Args:
-            host: Endereço do servidor
-            port: Porta do servidor
-        """
+    def __init__(self, host: str = "127.0.0.1", port: int = 8888, client_id: Optional[str] = None):
+        """Inicializa o cliente MiniCoin."""
         self.host = host
         self.port = port
+        self.client_id = client_id or "anonymous-client"
         self.logger = setup_logging()
         self.request_counter = 0
         
-        self.logger.info(f"MiniCoin Client initialized")
+        self.logger.info(f"MiniCoin Client initialized (id={self.client_id})")
 
     async def connect(self) -> tuple:
         """
@@ -92,6 +85,7 @@ class MiniCoinClient:
         request = {
             "action": action,
             "id": request_id,
+            "client_id": self.client_id,
             **kwargs
         }
         
