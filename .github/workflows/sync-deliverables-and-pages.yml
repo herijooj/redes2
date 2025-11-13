@@ -66,10 +66,18 @@ jobs:
           git status --short
 
       - name: Commit deliverables updates
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: sync deliverables"
-          file_pattern: deliverables/**/*
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [[ -z "$(git status --porcelain deliverables)" ]]; then
+            echo "No deliverables changes detected; skipping commit."
+            exit 0
+          fi
+          git add -A deliverables
+          git commit -m "chore: sync deliverables"
+          git pull --rebase origin main
+          git push origin HEAD:main
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
