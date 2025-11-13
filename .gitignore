@@ -27,6 +27,8 @@ MANIFEST
 .direnv
 .envrc
 
+# nixos
+shell.nix
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
