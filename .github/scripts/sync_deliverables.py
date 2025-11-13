@@ -10,6 +10,9 @@ CODE_MAPPINGS = {
     Path("tests/test_ledger.py"): Path("deliverables/code/test_ledger.py.txt"),
 }
 
+DOCS_REPORT_DIR = Path("docs/report")
+DOCS_DELIVERABLES_ROOT = DOCS_REPORT_DIR / "deliverables"
+
 
 def sync_code() -> None:
     for src, dest in CODE_MAPPINGS.items():
@@ -41,9 +44,28 @@ def sync_logs() -> None:
         print("No .log files found under logs/; skipping log sync.")
 
 
+def mirror_deliverables_to_docs() -> None:
+    source_root = Path("deliverables")
+
+    if not DOCS_REPORT_DIR.exists():
+        print("docs/report directory not found; skipping docs mirror.")
+        return
+
+    if not source_root.exists():
+        print("deliverables directory not found; skipping docs mirror.")
+        return
+
+    if DOCS_DELIVERABLES_ROOT.exists():
+        shutil.rmtree(DOCS_DELIVERABLES_ROOT)
+
+    shutil.copytree(source_root, DOCS_DELIVERABLES_ROOT)
+    print(f"Mirrored {source_root} -> {DOCS_DELIVERABLES_ROOT}")
+
+
 def main() -> None:
     sync_code()
     sync_logs()
+    mirror_deliverables_to_docs()
 
 
 if __name__ == "__main__":

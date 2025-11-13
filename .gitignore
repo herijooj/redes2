@@ -120,3 +120,6 @@ dmypy.json
 # Logs
 # logs/
 # *.log
+
+# Generated during docs deployment
+docs/report/deliverables/
