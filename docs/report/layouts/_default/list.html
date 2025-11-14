@@ -1,15 +1,15 @@
 {{ define "main" }}
 {{ if .Content }}
 <div class="content-layout">
-  <article class="post">
-    {{ .Content }}
-  </article>
   {{ with .TableOfContents }}
   <aside class="toc">
     <h2>Sumário</h2>
     {{ . | safeHTML }}
   </aside>
   {{ end }}
+  <article class="post">
+    {{ .Content }}
+  </article>
 </div>
 {{ end }}
 
