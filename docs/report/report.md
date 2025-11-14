@@ -5,6 +5,22 @@ date: "2025-11-14"
 description: "Implementação da moeda virtual MiniCoin para o TP de Redes de Computadores II (UFPR)."
 ---
 
+# MiniCoin - Relatório Técnico
+
+**Heric Camargo** - GRR20203959
+**Lucas Araujo** - GRR202XXXXX
+
+Data: 14 de novembro de 2025
+
+Links:
+
+[Ledger.py.txt](https://raw.githubusercontent.com/herijooj/redes2/refs/heads/main/deliverables/code/ledger.py.txt)
+[server.py.txt](https://raw.githubusercontent.com/herijooj/redes2/refs/heads/main/deliverables/code/server.py.txt)
+[simulator.py.txt](https://raw.githubusercontent.com/herijooj/redes2/refs/heads/main/deliverables/code/simulator.py.txt)
+
+[client.log](https://raw.githubusercontent.com/herijooj/redes2/refs/heads/main/logs/client.log)
+[server.log](https://raw.githubusercontent.com/herijooj/redes2/refs/heads/main/logs/server.log)
+
 ## 1. Visão Geral
 
 Este relatório descreve o desenvolvimento da MiniCoin, uma moeda virtual implementada como blockchain conforme especificação do Trabalho Prático de Redes de Computadores II.
@@ -685,31 +701,7 @@ graph TD
 
 ## 7. Conclusão
 
-### 7.1 Objetivos Alcançados
-
-A implementação da MiniCoin atendeu todos os requisitos especificados:
-
-✓ **Blockchain como lista encadeada**: Cada bloco aponta para o anterior via hash  
-✓ **Bloco gênesis**: Criado automaticamente com depósito inicial, proprietário e timestamp  
-✓ **Hash encadeado**: Calculado com dados do bloco atual + hash do bloco anterior  
-✓ **Operações de depósito e retirada**: Implementadas com validação adequada  
-✓ **Validação de saldo**: Retiradas inválidas são rejeitadas sem criar blocos  
-✓ **Verificação de integridade**: Sistema completo de validação da blockchain  
-✓ **Servidor TCP funcional**: Comunicação cliente-servidor via JSON sobre TCP  
-✓ **Testes exaustivos**: 8 cenários diferentes testados com sucesso  
-
-### 7.2 Aprendizados
-
-Durante o desenvolvimento foram consolidados conceitos de:
-
-- **Estruturas de dados encadeadas**: Implementação prática de lista com ponteiros via hash
-- **Criptografia aplicada**: Uso de SHA-256 para garantir integridade
-- **Programação assíncrona**: Servidor TCP com asyncio para múltiplas conexões
-- **Validação de dados**: Importância de validar entradas antes de modificar estado
-- **Logging e debugging**: Sistema de logs facilitou identificação de problemas
-- **Princípios de blockchain**: Compreensão dos fundamentos de sistemas distribuídos
-
-### 7.3 Dificuldades Encontradas
+### 7.1 Dificuldades Encontradas
 
 **Gestão de estado compartilhado**: 
 - Servidor assíncrono requer cuidado com acesso concorrente ao ledger
@@ -723,7 +715,7 @@ Durante o desenvolvimento foram consolidados conceitos de:
 - Definir protocolo claro entre cliente e servidor
 - Solução: JSON com campos padronizados e newline como delimitador
 
-### 7.4 Considerações Finais
+### 7.2 Considerações Finais
 
 A MiniCoin demonstra os princípios fundamentais de blockchain de forma simplificada mas funcional. A estrutura encadeada com hashes criptográficos garante integridade e detectabilidade de adulterações, enquanto as validações de negócio (saldo, valores positivos) garantem consistência lógica.
 
