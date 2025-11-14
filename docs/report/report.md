@@ -699,9 +699,7 @@ graph TD
 
 ---
 
-## 7. Conclusão
-
-### 7.1 Dificuldades Encontradas
+## 7. Dificuldades Encontradas
 
 **Gestão de estado compartilhado**: 
 - Servidor assíncrono requer cuidado com acesso concorrente ao ledger
@@ -715,12 +713,6 @@ graph TD
 - Definir protocolo claro entre cliente e servidor
 - Solução: JSON com campos padronizados e newline como delimitador
 
-### 7.2 Considerações Finais
-
-A MiniCoin demonstra os princípios fundamentais de blockchain de forma simplificada mas funcional. A estrutura encadeada com hashes criptográficos garante integridade e detectabilidade de adulterações, enquanto as validações de negócio (saldo, valores positivos) garantem consistência lógica.
-
-O sistema está pronto para uso em ambiente de testes e serve como base sólida para extensões futuras como persistência, distribuição e consenso entre múltiplos nós.
-
 ---
 
 ## Apêndice A: Estrutura de Arquivos
@@ -733,10 +725,12 @@ minicoin/
 │   └── server.py          # Servidor TCP assíncrono
 ├── tests/
 │   ├── test_ledger.py     # Testes unitários do ledger
-│   └── test_server.py     # Testes de integração
+│   └── test_integration.py  # Testes de integração cliente-servidor
+├── clients/
+│   └── simulator.py  # Simulador de cliente para testes
 ├── logs/
 │   └── server.log         # Logs do servidor
-└── README.md              # Documentação do projeto
+│   └── client.log          # Logs do cliente
 ```
 
 ## Apêndice B: Como Executar
