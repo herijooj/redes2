@@ -154,7 +154,7 @@ class MiniCoinLedger:
             Tupla (sucesso, mensagem, bloco_criado)
         """
         if amount <= 0:
-            return False, "Valor de depósito deve ser positivo", None
+            return False, "Valor de deposito deve ser positivo", None
 
         current_balance = self.get_balance()
         new_balance = current_balance + amount
@@ -185,7 +185,7 @@ class MiniCoinLedger:
         )
 
         self.chain.append(new_block)
-        return True, f"Depósito de {amount:.2f} realizado com sucesso", new_block
+        return True, f"Deposito de {amount:.2f} realizado com sucesso", new_block
 
     def withdraw(self, amount: float) -> Tuple[bool, str, Optional[Block]]:
         """
@@ -291,7 +291,7 @@ class MiniCoinLedger:
                 if abs(block.balance - expected_balance) > 0.001:  # Tolerância para float
                     return False, f"Saldo inconsistente no bloco {i}"
 
-        return True, "Blockchain íntegra"
+        return True, "Blockchain integra"
 
     def get_history(self) -> List[dict]:
         """
