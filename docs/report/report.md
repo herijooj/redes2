@@ -1,16 +1,6 @@
 ---
-title: "MiniCoin"
-author: "Heric Camargo GRR20203959 Lucas Araujo GRR202XXXXX"
-date: "2025-11-14"
-description: "Implementação da moeda virtual MiniCoin para o TP de Redes de Computadores II (UFPR)."
+description: "Heric Camargo GRR20203959 Lucas Araujo GRR202XXXXX"
 ---
-
-# MiniCoin - Relatório Técnico
-
-**Heric Camargo** - GRR20203959
-**Lucas Araujo** - GRR202XXXXX
-
-Data: 14 de novembro de 2025
 
 Links:
 
