@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="metadata">
+  <div>
+    <p class="meta-label">Autor(es)</p>
+    <p>{{ default .Site.Params.author .Params.author }}</p>
+  </div>
+  <div>
+    <p class="meta-label">Data</p>
+    <p>{{ .Date.Format "02 MMM yyyy" }}</p>
+  </div>
+</section>
+<div class="content-layout">
+  <article class="post">
+    {{ .Content }}
+  </article>
+  {{ with .TableOfContents }}
+  <aside class="toc">
+    <h2>Sumário</h2>
+    {{ . | safeHTML }}
+  </aside>
+  {{ end }}
+</div>
+{{ end }}

@@ -123,3 +123,5 @@ dmypy.json
 
 # Generated during docs deployment
 docs/report/deliverables/
+docs/report/content/
+docs/report/public/

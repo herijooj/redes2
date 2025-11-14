@@ -1,0 +1,21 @@
+baseURL = "https://herijooj.github.io/redes2/"
+languageCode = "pt-br"
+title = "MiniCoin — Relatório do TP"
+relativeURLs = true
+canonifyURLs = true
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+paginate = 10
+enableRobotsTXT = true
+
+[params]
+  author = "Heric Camargo & Lucas Araujo"
+  repoURL = "https://github.com/herijooj/redes2"
+  project = "MiniCoin"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    style = "dracula"
+    lineNos = true
+    noClasses = true

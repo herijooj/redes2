@@ -1,0 +1,54 @@
+{{ $styles := resources.Get "css/custom.css" | minify | fingerprint }}
+<!DOCTYPE html>
+<html lang="{{ or .Site.Language.Lang "pt-BR" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}{{ end }}</title>
+    {{ with .Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__content">
+        <div>
+          <p class="eyebrow">{{ .Site.Params.project }}</p>
+          <h1>{{ .Site.Title }}</h1>
+          {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+        </div>
+        <nav>
+          <a href="/" class="cta">Resumo</a>
+          {{ with .Site.Params.repoURL }}<a href="{{ . }}" target="_blank" rel="noopener" class="cta secondary">Repositório</a>{{ end }}
+        </nav>
+      </div>
+    </header>
+    <main class="site-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer class="site-footer">
+      <p>Gerado automaticamente com Hugo a partir de Markdown. Última atualização: {{ now.Format "2006-01-02" }}.</p>
+    </footer>
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+
+      const hydrateMermaid = () => {
+        document.querySelectorAll('pre code.language-mermaid').forEach((code) => {
+          const pre = code.parentElement;
+          const wrapper = document.createElement('div');
+          wrapper.classList.add('mermaid');
+          wrapper.textContent = code.textContent;
+          pre.replaceWith(wrapper);
+        });
+      };
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        hydrateMermaid();
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+      });
+    </script>
+  </body>
+</html>
