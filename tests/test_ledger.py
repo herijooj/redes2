@@ -173,7 +173,7 @@ class TestMiniCoinLedger:
         valid, message = ledger.verify_integrity()
         
         assert valid is True
-        assert "íntegra" in message.lower()
+        assert "integra" in message.lower()
     
     def test_hash_chaining(self):
         """Testa o encadeamento de hashes."""
