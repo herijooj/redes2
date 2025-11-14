@@ -100,9 +100,11 @@ nav .cta:hover {
   display: grid;
   grid-template-columns: minmax(0, 4fr) minmax(220px, 1fr);
   gap: 2rem;
+  grid-template-areas: "post toc";
 }
 
 .toc {
+  grid-area: toc;
   position: sticky;
   top: 2rem;
   align-self: start;
@@ -130,6 +132,7 @@ nav .cta:hover {
 }
 
 .post {
+  grid-area: post;
   background: rgba(0, 0, 0, 0.25);
   border-radius: 1.5rem;
   padding: clamp(1.5rem, 5vw, 3rem);
@@ -197,6 +200,9 @@ blockquote {
 @media (max-width: 960px) {
   .content-layout {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "toc"
+      "post";
   }
 
   .toc {

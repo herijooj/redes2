@@ -20,10 +20,6 @@
           <h1>{{ .Site.Title }}</h1>
           {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
         </div>
-        <nav>
-          <a href="/" class="cta">Resumo</a>
-          {{ with .Site.Params.repoURL }}<a href="{{ . }}" target="_blank" rel="noopener" class="cta secondary">Repositório</a>{{ end }}
-        </nav>
       </div>
     </header>
     <main class="site-content">
