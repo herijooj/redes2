@@ -4,7 +4,9 @@ title = "MiniCoin — Relatório do TP"
 relativeURLs = true
 canonifyURLs = true
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
-paginate = 10
+
+[pagination]
+  pagerSize = 10
 enableRobotsTXT = true
 
 [params]

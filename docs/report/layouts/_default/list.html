@@ -1,4 +1,19 @@
 {{ define "main" }}
+{{ if .Content }}
+<div class="content-layout">
+  <article class="post">
+    {{ .Content }}
+  </article>
+  {{ with .TableOfContents }}
+  <aside class="toc">
+    <h2>Sumário</h2>
+    {{ . | safeHTML }}
+  </aside>
+  {{ end }}
+</div>
+{{ end }}
+
+{{ if gt (len .Pages) 0 }}
 <section class="post-list">
   {{ range .Pages }}
     <article>
@@ -7,4 +22,5 @@
     </article>
   {{ end }}
 </section>
+{{ end }}
 {{ end }}
